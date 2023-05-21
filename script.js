@@ -181,4 +181,4 @@ function downloadTextFile(data, filename) {
   
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-}
+};
