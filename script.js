@@ -11,11 +11,9 @@ const downlBtn1 = document.querySelector('.downL-btn1')
 const downlBtn3 = document.querySelector('.downL-btn3')
 const el = document.querySelector('#place2')
 const count = document.querySelector('.count')
-const count2 = document.querySelector('.count2')
-
-
 
 const startTimer = () => {
+BtnStart.disabled = true;
 timer = setInterval(function () {
     seconds = timeMinut%60 
     minutes = timeMinut/60%60 
@@ -85,6 +83,10 @@ const createPlace = (x,y) => {
     footer.textContent = "";
     main.textContent = "";
 
+    const showCount = document.createElement('div')
+    showCount.classList.add('count2')
+    main.appendChild(showCount)
+
     const sheet1 = document.createElement('textarea')
     sheet1.classList.add('place')
     sheet1.id = `place${x}`
@@ -130,13 +132,14 @@ Btn2.addEventListener('click', () => {
     createPlace('3','4');
 })
 const onInput = (event) => {
+    const count2 = document.querySelector('.count2')
     let str = event.target.value;
     let wordList = str.split(" ");
     count.innerHTML = wordList;
     let rem = count.innerHTML;
     let gone = rem.split(',');
     console.log(gone.length);
-    count2.textContent = `Word Count: ${gone.length}`;
+    count2.textContent = `Word: ${gone.length}`;
     
 }
 
