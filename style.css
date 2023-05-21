@@ -119,6 +119,19 @@ p {
     border: none;
 }
 
+#place3 {
+    border: none;
+}
+
+#place1:focus {
+    outline: none;
+}
+
+#place3:focus {
+    outline: none;
+}
+
+
 textarea {
     resize: none;
     padding: 20px;

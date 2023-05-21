@@ -9,6 +9,8 @@ const saveBtn1 = document.querySelector('.save-btn1')
 const saveBtn3 = document.querySelector('.save-btn3')
 const downlBtn1 = document.querySelector('.downL-btn1')
 const downlBtn3 = document.querySelector('.downL-btn3')
+const el = document.querySelector('#place2')
+const count = document.querySelector('.count')
 
 const startTimer = () => {
 timer = setInterval(function () {
@@ -114,6 +116,7 @@ const createPlace = (x,y) => {
     downloadBox.addEventListener('click', () => {
         downloadTextFile(summary,'test.txt')
     })
+    sheet2.addEventListener('input', onInput)
     loadText(x,y);
 }
 
@@ -123,14 +126,34 @@ Btn1.addEventListener('click', () => {
 Btn2.addEventListener('click', () => {
     createPlace('3','4');
 })
+const onInput = (event) => {
+    let str = event.target.value;
+    let wordList = str.split(" ");
+    console.log(wordList)
+    let countWord = wordList.lenght;
+    console.log(countWord)
+    count.textContent = wordList.lenght;
+}
+// el.addEventListener('input', onInput)
 const saveText = (x,y,i) => {
     const el = document.getElementById(`place${x}`)
     const el2 = document.getElementById(`place${y}`)
+    
+    // el2.addEventListener('input', onInput)
+
     if(i == 1){
         console.log('LOL')
     }else{
     let question = el.value;
     let text = el2.value;
+    // let textLenght = el2.value.lenght;
+    // const onInput = (event) => {
+    //     const length = event.target.value.length;
+    //     count.textContent = length
+    // }
+    // el2.addEventListener('input', onInput)
+    // console.log(textLenght)
+    // count.innerHTML = textLenght
     summary = question + '\n---------------------------\n' + text
     localStorage.setItem(`question${x}`, JSON.stringify(question))
     localStorage.setItem(`text${y}`, JSON.stringify(text))
@@ -162,3 +185,6 @@ function downloadTextFile(data, filename) {
     URL.revokeObjectURL(url);
 }
 
+// const wordsCount = (text) => {
+
+// }
