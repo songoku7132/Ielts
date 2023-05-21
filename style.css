@@ -101,7 +101,7 @@ p {
 .main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 80px;
+    /* grid-template-rows: 1fr 80px; */
     padding-left: 200px;
     padding-right: 100px;
     padding-top: 60px;
