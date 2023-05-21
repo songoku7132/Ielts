@@ -83,10 +83,6 @@ const createPlace = (x,y) => {
     footer.textContent = "";
     main.textContent = "";
 
-    const showCount = document.createElement('div')
-    showCount.classList.add('count2')
-    main.appendChild(showCount)
-
     const sheet1 = document.createElement('textarea')
     sheet1.classList.add('place')
     sheet1.id = `place${x}`
