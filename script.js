@@ -82,11 +82,13 @@ const createPlace = (x,y) => {
     const sheet1 = document.createElement('textarea')
     sheet1.classList.add('place')
     sheet1.id = `place${x}`
+    sheet1.setAttribute('spellcheck','false')
     main.appendChild(sheet1)
 
     const sheet2 = document.createElement('textarea')
     sheet2.classList.add('place')
     sheet2.id = `place${y}`
+    sheet2.setAttribute('spellcheck','false')
     main.appendChild(sheet2)
 
     const saveBox = document.createElement('div');
