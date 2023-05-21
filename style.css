@@ -103,7 +103,7 @@ p {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 80px;
     padding-left: 200px;
-    padding-right: 200px;
+    padding-right: 100px;
     padding-top: 60px;
     padding-bottom: 60px;
 }
@@ -119,7 +119,7 @@ p {
 }
 
 #place2 {
-    margin-left: 100px;
+    /* margin-left: 100px; */
 }
 
 #place3 {
@@ -128,7 +128,7 @@ p {
 }
 
 #place4 {
-    margin-left: 100px;
+    /* margin-left: 100px; */
 }
 
 #place1:focus {
