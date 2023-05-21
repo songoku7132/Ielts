@@ -1,4 +1,4 @@
-let timeMinut = '3600';
+let timeMinut = '3599';
 let i = 0;
 let summary = ''
 const BtnStart = document.querySelector('.start-timer')
@@ -20,7 +20,7 @@ timer = setInterval(function () {
         
         clearInterval(timer);
         
-        alert("Время закончилось");
+        alert("Time is over");
     }else if(timeMinut <= 600){
         const el = document.querySelector('.tablo')
         el.style.cssText='color: red;'
@@ -29,7 +29,8 @@ timer = setInterval(function () {
         tablo.innerHTML = strTimer;
     }else { 
         
-        let strTimer = `0${Math.trunc(hour)}:${Math.trunc(minutes)}:${seconds}`;
+        // let strTimer = `0${Math.trunc(hour)}:${Math.trunc(minutes)}:${seconds}`;
+        let strTimer = `${Math.trunc(minutes)}:${seconds}`;
         
         tablo.innerHTML = strTimer;
     }

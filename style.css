@@ -112,6 +112,11 @@ p {
 
 .place {
     border: 2px solid black;
+    border-radius: 20px;
+}
+
+#place1 {
+    border: none;
 }
 
 textarea {
@@ -119,4 +124,5 @@ textarea {
     padding: 20px;
     font-family: 'Libre Franklin', sans-serif;
     font-weight: 600;
+    font-size: 1.2em;
 }
