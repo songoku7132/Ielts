@@ -27,6 +27,11 @@ body {
     text-align: center;
     cursor: pointer;
     grid-column: 2/3;
+    border-radius: 0.6em;
+}
+
+.start-timer:active {
+    background-color: rgb(4, 107, 4);
 }
 
 .tablo {
@@ -55,6 +60,11 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border-radius: 0.6em;
+}
+
+.button:active {
+    background-color: rgb(105, 108, 105);
 }
 
 .one {
@@ -92,6 +102,14 @@ body {
     justify-content: center;
     align-items: center;
     margin: 10px;
+    border-radius: 0.6em;
+}
+
+.save-btn1:active,
+.save-btn3:active,
+.downL-btn1:active,
+.downL-btn3:active {
+    background-color: rgb(4, 107, 4);
 }
 
 p {
@@ -101,12 +119,14 @@ p {
 .main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: 1fr 80px; */
     padding-left: 200px;
     padding-right: 100px;
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: rgb(243, 234, 234);
+    background-image: url(wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .place {
@@ -149,4 +169,13 @@ textarea {
     font-family: 'Libre Franklin', sans-serif;
     font-weight: 600;
     font-size: 1.2em;
+}
+
+.start-timer:hover,
+.button:hover,
+.save-btn1:hover,
+.save-btn3:hover,
+.downL-btn1:hover,
+.downL-btn3:hover {
+    opacity: 0.5;
 }
